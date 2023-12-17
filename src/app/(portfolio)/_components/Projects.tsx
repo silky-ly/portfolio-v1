@@ -22,9 +22,9 @@ const projects = [
 export function Projects() {
   return (
     <section className="h-screen pt-5 px-12">
-      <h4 className="project-heading relative inline-block text-4xl uppercase font-bold [letter-spacing:-0.2px] text-black">
+      <h4 className="group relative inline-block text-4xl uppercase font-bold [letter-spacing:-0.2px] text-black cursor-pointer">
         Interesting Projects{" "}
-        <span className="block w-24 h-1 absolute -bottom-1 left-0 transition-width duration-900 bg-black"></span>
+        <span className="block w-24 h-1 absolute -bottom-1 left-0 transition-width duration-700 bg-black group-hover:w-4/5"></span>
       </h4>
 
       <div className="mt-8 h-auto flex">

@@ -74,9 +74,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-@layer components {
-  .project-heading:hover span {
-    width: 80%;
-  }
-}

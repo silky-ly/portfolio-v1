@@ -1,20 +1,33 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Icons } from "@/components/icons";
 
 export function Home() {
   return (
-    <section className="w-screen h-screen relative grid sm:grid-cols-6">
+    <section className="h-screen relative grid sm:grid-cols-6">
       <div className="col-span-4 relative">
         <p className="w-2/5 h-auto absolute left-56 top-36">
-          <span className="mb-3 block uppercase text-xs font-semibold underline decoration-2 underline-offset-8">
-            bio
-          </span>
+          <motion.span
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
+            <span className="mb-3 block uppercase text-xs font-semibold underline decoration-2 underline-offset-8">
+              bio
+            </span>
 
-          <span className="block text-xs font-medium leading-4">
-            A versatile and vibrant Software Engineer dedicated to delivering
-            exceptional user experiences through outstanding work.
-          </span>
+            <span className="block w-60 text-xs font-medium leading-4">
+              A versatile and savvy Software Engineer dedicated to delivering
+              exceptional user experiences.
+            </span>
+          </motion.span>
         </p>
       </div>
 
@@ -27,6 +40,7 @@ export function Home() {
             height={500}
             quality={100}
             alt="image"
+            priority
           />
 
           <div className="absolute bottom-[-50px] right-0">
@@ -34,7 +48,7 @@ export function Home() {
               href=""
               className="text-xs uppercase font-semibold align-middle cursor-pointer [letter-spacing:-0.4px] text-black"
             >
-              get in touch <Icons.arrowDown />
+              get in touch <Icons.ArrowDown />
             </Link>
           </div>
         </div>

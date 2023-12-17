@@ -1,7 +1,7 @@
 type IconProps = React.HTMLAttributes<SVGElement> & { isactive?: boolean };
 
 export const Icons = {
-  arrowDown: (props: IconProps) => (
+  ArrowDown: (props: IconProps) => (
     <svg
       className="inline align-middle"
       xmlns="http://www.w3.org/2000/svg"

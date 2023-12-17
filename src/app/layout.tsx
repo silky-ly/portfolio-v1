@@ -1,9 +1,8 @@
 import "@/styles/globals.scss";
 
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
-// import { siteConfig } from '@/constants/site-config'
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
@@ -48,7 +47,7 @@ const degular = localFont({
       style: "normal",
     },
     {
-      path: "fonts/degular/Degular-Bold.otf",
+      path: "fonts/Degular/Degular-Bold.otf",
       weight: "700",
       style: "normal",
     },

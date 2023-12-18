@@ -1,11 +1,25 @@
 "use client";
 
+import gsap from "gsap";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Icons } from "@/components/icons";
 
 export function Home() {
+  const showRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to(showRef.current, {
+      height: 0,
+      stagger: 0.5,
+      duration: 1.5,
+      delay: 6.5,
+      ease: "power4.inOut",
+    });
+  }, []);
+
   return (
     <section className="h-screen relative grid sm:grid-cols-6">
       <div className="col-span-4 relative">
@@ -33,6 +47,11 @@ export function Home() {
 
       <div className="col-span-2 flex justify-center items-center">
         <div className="w-3/4 h-3/4 relative">
+          <div
+            ref={showRef}
+            className="imb-bar absolute object-cover w-full h-full bg-white"
+          ></div>
+
           <Image
             className="w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1504802318913-d3f9a487448c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIwfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"

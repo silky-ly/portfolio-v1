@@ -1,5 +1,6 @@
 "use client";
 
+import Cursor from "@/components/ui/Cursor";
 import { Footer, Intro, Navbar } from "./_components";
 
 export default function PortfolioLayout({
@@ -9,11 +10,12 @@ export default function PortfolioLayout({
 }) {
   return (
     <div id="app">
-      <Intro />
+      {/* <Intro /> */}
       <div className="app-layout">
         <Navbar />
 
         <div className="app-content">
+          <Cursor />
           <div className="">{children}</div>
         </div>
         <Footer />

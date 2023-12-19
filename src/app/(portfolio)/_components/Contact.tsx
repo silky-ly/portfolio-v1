@@ -39,10 +39,6 @@ export function Contact() {
           ))}
         </div>
       </div>
-
-      <div className="h-2/4 absolute left-[33%] top-0 border-l-0.5 border-solid border-black"></div>
-      <div className="h-2/4 absolute left-[66%] bottom-0 border-l-0.5 border-solid border-black"></div>
-      <div className="absolute w-screen top-[50%] border-b-0.5 border-solid border-black"></div>
     </section>
   );
 }

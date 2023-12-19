@@ -3,22 +3,23 @@
 import gsap from "gsap";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
 import { motion } from "framer-motion";
 import { Icons } from "@/components/icons";
 
 export function Home() {
   const showRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     gsap.to(showRef.current, {
       height: 0,
       stagger: 0.5,
       duration: 1.5,
-      delay: 6.5,
+      delay: 8.5,
       ease: "power4.inOut",
     });
-  }, []);
+  });
 
   return (
     <section className="h-screen relative grid sm:grid-cols-6">
@@ -65,7 +66,7 @@ export function Home() {
           <div className="absolute bottom-[-50px] right-0">
             <Link
               href=""
-              className="text-xs uppercase font-semibold align-middle cursor-pointer [letter-spacing:-0.4px] text-black"
+              className="text-xs uppercase font-semibold align-middle cursor-pointer [letter-spacing:-0.4px]"
             >
               get in touch <Icons.ArrowDown />
             </Link>
@@ -73,8 +74,8 @@ export function Home() {
         </div>
       </div>
 
-      <div className="h-screen absolute left-[66%] top-0 border-l-0.5 border-solid border-black"></div>
-      <div className="absolute w-[66vw] top-[50%] border-b-0.5 border-solid border-black"></div>
+      <div className="h-screen absolute left-[66%] top-0 border-l-0.5 border-solid border-foreground"></div>
+      <div className="absolute w-[66vw] top-[50%] border-b-0.5 border-solid border-foreground"></div>
     </section>
   );
 }

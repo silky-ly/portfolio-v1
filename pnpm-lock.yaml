@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@gsap/react':
+    specifier: ^2.0.2
+    version: 2.0.2(react@18.2.0)
   '@motionone/utils':
     specifier: ^10.16.3
     version: 10.16.3
@@ -144,6 +147,14 @@ packages:
     resolution: {integrity: sha512-Kn7K8dx/5U6+cT1yEhpX1w4PCSg0M+XyRILPgvwcEBjerFWCwQj5sbr3/VmxqV0JGHCBCzyd6LxypEuehypY1w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@gsap/react@2.0.2(react@18.2.0):
+    resolution: {integrity: sha512-Uo2lOBlGcwmkIE9EcPdsyDfg+DRAoboVvuWgvVIrsJ2tIZHcpFab82YNV0iWj9CNfTzIqGP44ziXqsCMkc8OEw==}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@humanwhocodes/config-array@0.11.13:
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}

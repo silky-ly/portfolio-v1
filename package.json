@@ -23,6 +23,7 @@
     "typecheck:why": "tsc --noEmit --explainFiles > explainTypes.txt"
   },
   "dependencies": {
+    "@gsap/react": "^2.0.2",
     "@motionone/utils": "^10.16.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",

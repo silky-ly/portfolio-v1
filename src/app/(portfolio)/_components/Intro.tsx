@@ -2,6 +2,7 @@
 
 import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
+import { useGSAP } from "@gsap/react";
 
 export function Intro() {
   const [counter, setCounter] = useState<number>(0);
@@ -19,7 +20,7 @@ export function Intro() {
       setCounter(100);
     } else {
       setCounter(updatedCounter);
-      const delay = Math.floor(Math.random() * 200) + 50;
+      const delay = Math.floor(Math.random() * 300) + 50;
       setTimeout(() => updateCounter(updatedCounter), delay);
     }
   };
@@ -28,38 +29,50 @@ export function Intro() {
     updateCounter(counter);
   }, []);
 
-  useEffect(() => {
+  useGSAP(() => {
     gsap.to(counterRef.current, {
       opacity: 0,
-      delay: 3.5,
+      delay: 4.5,
+    });
+
+    gsap.to(counterRef?.current?.children, {
+      opacity: 0,
+      delay: 5.5,
     });
 
     gsap.to(barsRef?.current?.children, {
       height: 0,
       stagger: 0.5,
-      duration: 1.5,
-      delay: 3.5,
+      duration: 2.5,
+      delay: 5.5,
       ease: "power4.inOut",
     });
-  }, []);
+  });
 
   return (
     <>
       <h1
         ref={counterRef}
-        className="text-[20vw] text-purple-400 fixed w-full h-full flex justify-end items-end z-[10]"
+        className="text-3xl text-black fixed right-5 bottom-5 w-full h-full flex justify-end items-end z-[10]"
       >
-        {counter}
+        {counter === 100 ? (
+          <span className="block absolute top-[50%] left-[50%] text-black">
+            lucid
+          </span>
+        ) : (
+          `${counter}%`
+        )}
       </h1>
 
       <div
         ref={barsRef}
         className="fixed h-screen w-screen object-cover z-[2] flex"
       >
-        <div className="bar w-[25vw] h-[105vh] bg-[#060606]"></div>
-        <div className="bar w-[25vw] h-[105vh] bg-[#050301]"></div>
-        <div className="bar w-[25vw] h-[105vh] bg-[#040200]"></div>
-        <div className="bar w-[25vw] h-[105vh] bg-[#020403]"></div>
+        <div className="bar w-[20vw] h-[105vh] bg-white"></div>
+        <div className="bar w-[20vw] h-[105vh] bg-white"></div>
+        <div className="bar w-[20vw] h-[105vh] bg-white"></div>
+        <div className="bar w-[20vw] h-[105vh] bg-white"></div>
+        <div className="bar w-[20vw] h-[105vh] bg-white"></div>
       </div>
     </>
   );

@@ -4,10 +4,11 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
-export default function Cursor() {
+export function Cursor() {
   const cursorRef = useRef(null);
+  const circleRef = useRef(null);
 
-  const setCursorPos = (event) => {
+  const setCursorPos = (event: any) => {
     const mouseX = event.clientX;
     const mouseY = event.clientY;
 
@@ -16,7 +17,7 @@ export default function Cursor() {
       y: mouseY,
     });
 
-    gsap.to(".js-circle", {
+    gsap.to(circleRef.current, {
       x: mouseX,
       y: mouseY,
       duration: 1.25,
@@ -32,12 +33,14 @@ export default function Cursor() {
 
   return (
     <>
-      <div className="circles mix-blend-screen fixed top-0 left-0">
-        <div className="circles__item circles__item--1 rounded-full will-change-transform w-[50px] h-[50px] bg-purple-300 -mt-[25px] mr-0 mb-0 -ml-[25px] js-circle"></div>
-      </div>
+      <div
+        ref={circleRef}
+        className="circles__item circles__item--1 mix-blend-difference z-[10000] fixed top-0 left-0 rounded-full will-change-transform w-8 h-8 bg-white"
+      ></div>
+
       <div
         ref={cursorRef}
-        className="fixed top-0 left-0 w-5 h-5 -mt-[10px] mr-0 mb-0 -ml-[10px] rounded-full bg-lime-500 z-[100] will-change-transform pointer-events-none select-none"
+        className="fixed top-3.5 left-3.5 w-1 h-1 rounded-full bg-blue-700 z-[10000] will-change-transform pointer-events-none select-none"
       ></div>
     </>
   );

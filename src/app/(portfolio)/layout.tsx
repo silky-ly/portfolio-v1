@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { Footer, Intro, Navbar } from "./_components";
 
@@ -9,10 +9,9 @@ export default function PortfolioLayout({
 }) {
   return (
     <div id="app">
-      {/* <Intro /> */}
+      <Intro />
       <div className="app-layout">
         <Navbar />
-
         <div className="app-content">
           <div className="">{children}</div>
         </div>

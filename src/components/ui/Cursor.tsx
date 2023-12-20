@@ -35,12 +35,12 @@ export function Cursor() {
     <>
       <div
         ref={circleRef}
-        className="circles__item circles__item--1 mix-blend-difference z-[10000] fixed top-0 left-0 rounded-full will-change-transform w-8 h-8 bg-white"
+        className="circles__item circles__item--1 mix-blend-difference z-[8] fixed top-0 left-0 rounded-full will-change-transform w-8 h-8 bg-white"
       ></div>
 
       <div
         ref={cursorRef}
-        className="fixed top-3.5 left-3.5 w-1 h-1 rounded-full bg-blue-700 z-[10000] will-change-transform pointer-events-none select-none"
+        className="fixed top-3.5 left-3.5 w-1 h-1 rounded-full bg-blue-700 z-[8] will-change-transform pointer-events-none select-none"
       ></div>
     </>
   );

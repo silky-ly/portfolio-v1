@@ -66,7 +66,7 @@ export function Intro() {
 
       <div
         ref={barsRef}
-        className="fixed h-screen w-screen object-cover z-[2] flex"
+        className="fixed h-screen w-screen object-cover z-[9] flex"
       >
         <div className="bar w-[20vw] h-[105vh] bg-white"></div>
         <div className="bar w-[20vw] h-[105vh] bg-white"></div>

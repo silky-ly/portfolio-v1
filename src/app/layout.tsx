@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: "Faith Amiekhame",
     template: "",
   },
-  description: "",
+  description: "A portfolio of projects",
   robots: { index: true, follow: true },
   icons: {
     icon: "/favicon/favicon.ico",
@@ -53,6 +53,38 @@ const degular = localFont({
     },
   ],
   variable: "--font-degular",
+  display: "swap",
+});
+
+const clashDisplay = localFont({
+  src: [
+    {
+      path: "fonts/ClashDisplay/ClashDisplay-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "fonts/ClashDisplay/ClashDisplay-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "fonts/ClashDisplay/ClashDisplay-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "fonts/ClashDisplay/ClashDisplay-Semibold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "fonts/ClashDisplay/ClashDisplay-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-clash-display",
   display: "swap",
 });
 
